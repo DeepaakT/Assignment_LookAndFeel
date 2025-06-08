@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synchrony - Analytics Dashboard</title>
+  <link rel="stylesheet" href="css/Software Development.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #f8f8fc;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .dashboard {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .dashboard h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+      color: #111;
+    }
+
+    .chart-container {
+      background: #fff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .chart-container h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #111;
+      margin-bottom: 1.5rem;
+      align-self: flex-start;
+    }
+
+    canvas {
+      max-width: 100%;
+      width: 400px;
+      height: 400px !important;
+    }
+
+    @media (max-width: 600px) {
+      canvas {
+        width: 100% !important;
+        height: 200px !important;
+      }
+
+      .chart-container {
+        padding: 1.25rem;
+      }
+
+      .chart-container h3 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <h1 class="text-2xl font-extrabold text-black">Synchrony</h1>
+      <nav>
+        <ul class="flex space-x-8 text-base font-medium">
+          <li><a href="index.html" class="hover:text-gray-600">Home</a></li>
+          <li><a href="About US.html" class="hover:text-gray-600">About</a></li>
+          <li><a href="Services.html" class="hover:text-gray-600">Services</a></li>
+          <li><a href="Analytics.html" class="font-semibold text-black border-b-2 border-black pb-1">Analytics</a></li>
+          <li>
+            <a href="Start Project.html" class="bg-lime-200 text-black px-4 py-1 rounded-full font-semibold hover:bg-lime-300 transition">
+              Start a Project
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Dashboard Section -->
+  <main class="dashboard">
+    <h2>Project Analytics Dashboard</h2>
+
+    <div class="chart-container">
+      <h3>Project Completion by Department</h3>
+      <canvas id="barChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <h3>Project Status Distribution</h3>
+      <canvas id="pieChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <h3>Monthly User Visits</h3>
+      <canvas id="lineChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <h3>Platform Usage Share</h3>
+      <canvas id="doughnutChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <h3>Client Response Time by Phase</h3>
+      <canvas id="scatterChart"></canvas>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>Synchrony</h2>
+        <p>Partner with Synchrony and take the first step toward transforming your digital presence.</p>
+      </div>
+      <div class="footer-grid">
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li>Brand Design</li>
+            <li>Web Development</li>
+            <li>Digital Marketing</li>
+            <li>App Development</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About US.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Analytics.html">Analytics</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>123 Innovation Drive, Tech City, NJ 80091</li>
+            <li>+1 8135256142</li>
+            <li>hello@synchrony.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 Synchrony. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Chart Scripts -->
+  <script src="js/chat.js"></script>
+</body>
+</html>
